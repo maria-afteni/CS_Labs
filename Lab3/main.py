@@ -1,4 +1,4 @@
-alphabet = list("AĂÂBCDEFGHIÎKLMNOPQRSŞTŢUVWXYZ")
+alphabet = list("AĂÂBCDEFGHIÎKLMNOPQRSŞTȚUVWXYZ")
 
 
 def create_matrix(key):
@@ -121,6 +121,7 @@ def get_key():
 
 def get_source():
     source = input("Enter the source text(plaintext or cypher):\n")
+    source = source.upper().replace("J", "I")
     if not validate_source(reform_source(source)):
         get_source()
 
@@ -140,6 +141,7 @@ def main():
     match option:
         case 1:
             key = get_key()
+
             source = get_source()
             matrix = create_matrix(key)
             reformed_source = reform_source(source)
