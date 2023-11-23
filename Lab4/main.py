@@ -70,6 +70,7 @@ def generate_key(key):
 
 
 def main():
+
     while True:
         key = input("Input key(8 characters) or press 'q' to quit: ")
         if key == "q":
